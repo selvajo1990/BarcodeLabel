@@ -2,7 +2,7 @@
   "id": "06c4d117-6cab-4b30-b4fa-6a6dbde1c5c8",
   "name": "Barcode Label",
   "publisher": "Tamanna",
-  "version": "1.0.0.0",
+  "version": "1.0.0.4",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -17,7 +17,7 @@
   "idRanges": [
     {
       "from": 60100,
-      "to": 60149
+      "to": 60101
     }
   ],
   "contextSensitiveHelpUrl": "https://ControlAddin.com/help/",

@@ -2,64 +2,15 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "snapshotInitialize: Microsoft production cloud",
-        "type": "al",
-        "request": "snapshotInitialize",
-        "environmentType": "Production",
-        "environmentName": "Tamanna",
-        "breakOnNext": "WebClient",
-        "sessionId": 6495
-      },
-      {
         "type": "al",
         "request": "launch",
         "name": "Tamanna - Cloud",
         "breakOnError" :true,
         "launchBrowser": true,
         "tenant": "4fa9c138-d3e7-4bc3-8bab-a74bde6b7584",
-        "environmentName": "Sandbox",
         "environmentType": "Sandbox",
+        "environmentName": "Sandbox2",
         "schemaUpdateMode": "Synchronize",
-        "startupObjectId": 60100
-      },
-      {
-        "type": "al",
-        "request": "launch",
-        "name": "Local",
-        "breakOnError": true,
-        "launchBrowser": true,
-        "server": "http://bcserver",
-        "serverInstance": "BC",
-        "authentication": "UserPassword",
       }
-      //   {
-      //     "name": "Web Service",
-      //     "type": "al",
-      //     "request": "attach",
-      //     "environmentName": "Sandbox2",
-      //     "environmentType": "Sandbox",
-      //     "breakOnError": true,
-      //     "breakOnRecordWrite": false,
-      //     "enableSqlInformationDebugger": true,
-      //     "enableLongRunningSqlStatements": true,
-      //     "longRunningSqlStatementsThreshold": 500,
-      //     "numberOfSqlStatements": 10,
-      //     "breakOnNext": "WebServiceClient"
-      // },
-      // {
-      //   "type": "al",
-      //   "request": "launch",
-      //   "name": "Tamanna - Local",
-      //   "schemaUpdateMode": "Synchronize",
-      //   "server": "http://localhost",
-      //   "serverInstance": "Tamanna",
-      //   "port": 1705,
-      //   "authentication": "UserPassword",
-      //   "breakOnError": true,
-      //   "launchBrowser": true,
-      //   "enableLongRunningSqlStatements": true,
-      //   "enableSqlInformationDebugger": true,
-      //   "tenant": "default"
-      // },
     ]
   }
