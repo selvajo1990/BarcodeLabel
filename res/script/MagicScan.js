@@ -1,8 +1,9 @@
 var scannedValue = '';
-var endTime = new Date().getTime();
+var startTime = new Date().getTime();
 window.parent.addEventListener('keydown', event => {
-    var startTime = new Date().getTime();
+    var endTime = new Date().getTime();
     if (event.key == 'Enter') {
+        scannedValue = scannedValue.trim();
         Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('MagicScan', [scannedValue])
         scannedValue = '';
         event.preventDefault();
@@ -10,13 +11,13 @@ window.parent.addEventListener('keydown', event => {
     }
     else
         if (event.keyCode >= 48) {
-            if (startTime - endTime < 100) {
-                scannedValue = scannedValue + event.key;
-                console.log(scannedValue);
-                endTime = startTime;
-            } else {
-                scannedValue = '';
-                endTime = startTime;
+             if (endTime - startTime < 100) {
+            scannedValue = scannedValue + event.key;
+            console.log(scannedValue);
+            startTime = endTime;
+             } else {
+                scannedValue = event.key;
+                startTime = endTime;
             }
         }
 });
